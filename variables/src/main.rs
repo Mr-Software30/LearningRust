@@ -8,6 +8,8 @@ fn main() {
     println!("The value of x is: {x}");
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
     println!("The value of THREE_HOURS_IN_SECONDS is: {THREE_HOURS_IN_SECONDS}");
+    let difference = 5 / 3;
+    println!("The value of difference is: {difference}");
 
     //--------- shadowing -------------
     let z = 8;
