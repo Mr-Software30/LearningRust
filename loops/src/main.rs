@@ -20,7 +20,7 @@ fn main() {
 
         loop {
             println!("remaining = {remaining}");
-            if remaining == 5 {
+            if remaining == 8 {
                 break;
             }
             if count == remaining{
@@ -31,5 +31,21 @@ fn main() {
 
         count += 1;
     }
-    println!("End count = {count}");
+    println!("End count = {count}\n\n");
+
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!\n\n");
+
+    let array = [10, 20, 30, 40, 50];
+
+    for element in array {
+        println!("the value is: {element}");
+    }
 }
