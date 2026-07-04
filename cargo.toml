@@ -2,5 +2,5 @@
 members = [
     "hello_world",
     "hello_cargo",
-    "guessing_game", "variables", "functions", "branches",
+    "guessing_game", "variables", "functions", "branches", "loops",
 ]
