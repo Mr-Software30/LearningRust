@@ -9,9 +9,9 @@ fn main() {
         }
     };
 
-    println!("The result is {result}\n");
+    println!("The result is {result}");
 
-
+    println!("\n--------------------\n");
 
     let mut count = 0;
     'counting_up: loop {
@@ -23,7 +23,7 @@ fn main() {
             if remaining == 8 {
                 break;
             }
-            if count == remaining{
+            if count == 3{
                 break 'counting_up;
             }
             remaining -= 1;
@@ -31,7 +31,9 @@ fn main() {
 
         count += 1;
     }
-    println!("End count = {count}\n\n");
+    println!("End count = {count}");
+
+    println!("\n--------------------\n");
 
     let mut number = 3;
 
@@ -41,11 +43,20 @@ fn main() {
         number -= 1;
     }
 
-    println!("LIFTOFF!!!\n\n");
+    println!("LIFTOFF!!!");
+    println!("\n--------------------\n");
 
     let array = [10, 20, 30, 40, 50];
 
     for element in array {
         println!("the value is: {element}");
     }
+    println!("\n--------------------\n");
+
+    for i in (1..5).rev() {
+        println!("{i}");
+    }
+    println!("START!");
+
+    println!("\n--------------------\n");
 }
