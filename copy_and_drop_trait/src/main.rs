@@ -1,13 +1,20 @@
 fn main() {
     let s = String::from("hello");  // s comes into scope
 
+    //s.push_str(" my friend");     // s is not mut  
+    println!("{s}");
+    
     takes_ownership(s);             // s's value moves into the function, and so is no longer valid here
-                                    
+
+    //println!("{s}");                // error
+
     let x = 5;                      // x comes into scope
 
     makes_copy(x);                  // Because i32 implements the Copy trait,
                                     // x does NOT move into the function,
                                     // so it's okay to use x afterward.
+
+    println!("{}" , x + 2);
 
 } // Here, x goes out of scope, then s. However, because s's value was moved,
   // nothing special happens.
