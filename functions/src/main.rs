@@ -14,7 +14,7 @@ fn main() {
         .read_line(&mut number_2)
         .expect("Failed to read line");
 
-    let mut number_1: i32 = match number_1.trim().parse() {
+    let number_1: i32 = match number_1.trim().parse() {
         Ok(number) => number,
         Err(_) => 0,
     };
