@@ -1,6 +1,7 @@
 // use crate::UsState::Alaska;
 
 #[derive(Debug)]
+#[allow(dead_code)]
 enum IpAddr {
         V4(i8, i8, i8, i8),
         V6(String),
@@ -10,6 +11,7 @@ enum IpAddr {
 //     Some(T),
 //     None,
 // }
+
 #[derive(Debug)]
 enum UsState {
     Alabama,
@@ -33,8 +35,9 @@ fn main() {
     println!("Home: {:?}", home);
     println!("Loopback: {:?}\n\n", loopback);
 
+    value_in_cents(UsCoin::Quarter(UsState::Alabama));
     value_in_cents(UsCoin::Quarter(UsState::Alaska));
-    value_in_cents(UsCoin::Penny);
+    value_in_cents(UsCoin::Nickel);
     value_in_cents(UsCoin::Dime);
     let coin1 = UsCoin::Penny;
 
