@@ -1,3 +1,12 @@
+
+enum SpreadSheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
+
+
 fn main() {
     let mut vec1: Vec<i32> = Vec::new();
     let mut vec2 = vec![1, 3, 5, 7];
@@ -20,7 +29,7 @@ fn main() {
         println!("{i}");
     }
 
-    
+
 
     // let third: &i32 = &vec1[2];
     // println!("The third element is {}", third);
@@ -29,6 +38,23 @@ fn main() {
     match third {
         Some(third) => println!("The third element is {}", third),
         None => println!("nothing found my friend!"),
+    }
+
+    println!("\n--------------------\n");
+
+    let row1 = vec![
+        SpreadSheetCell::Int(2),
+        SpreadSheetCell::Text(String::from("warzer")),
+        SpreadSheetCell::Float(70.25),
+    ];
+
+    // super exhaustive match needed here
+    for i in &row1 {
+        match i {
+            SpreadSheetCell::Int(i) => println!("Int: {i}"),
+            SpreadSheetCell::Text(s) => println!("Text: {s}"),
+            SpreadSheetCell::Float(f) => println!("Float: {f}"),
+        }
     }
 
 }
