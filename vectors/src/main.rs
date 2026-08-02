@@ -9,6 +9,13 @@ fn main() {
 
     println!("Vec: {:?}", vec1);
 
-    vec1.remove(2);
-    println!("Vec: {:?}", vec1);
+    // let third: &i32 = &vec1[2];
+    // println!("The third element is {}", third);
+
+    let third: Option<&i32> = vec1.get(2);
+    match third {
+        Some(third) => println!("The third element is {}", third),
+        None => println!("nothing found my friend!"),
+    }
+
 }
