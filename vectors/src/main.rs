@@ -1,13 +1,26 @@
 fn main() {
     let mut vec1: Vec<i32> = Vec::new();
-    // let _vec2 = vec![1, 3, 5, 7];
+    let mut vec2 = vec![1, 3, 5, 7];
 
     vec1.push(1);
     vec1.push(3);
     vec1.push(5);
     vec1.push(7);
 
-    println!("Vec: {:?}", vec1);
+    // println!("Vec: {:?}", vec1);
+
+    for i in &vec1 {
+        println!("{i}");
+    }
+
+    println!("\n--------------------\n");
+    // mutable reference
+    for i in &mut vec2 {
+        *i += 1; // * dereference operator to get to the value in i
+        println!("{i}");
+    }
+
+    
 
     // let third: &i32 = &vec1[2];
     // println!("The third element is {}", third);
