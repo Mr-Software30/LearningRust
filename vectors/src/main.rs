@@ -19,3 +19,22 @@ fn main() {
     }
 
 }
+/*
+    let mut v = vec![1, 2, 3, 4, 5];
+
+    let first = &v[0];
+
+    v.push(6);
+
+    println!("The first element is: {first}");
+
+    might look like it should work: Why should a reference to the first element 
+    care about changes at the end of the vector? 
+    This error is due to the way vectors work: 
+    Because vectors put the values next to each other in memory, 
+    adding a new element onto the end of the vector might require allocating new memory and 
+    copying the old elements to the new space, 
+    if there isn’t enough room to put all the elements next to each other where the vector is currently stored. 
+    In that case, the reference to the first element would be pointing to deallocated memory. 
+    The borrowing rules prevent programs from ending up in that situation.
+*/
